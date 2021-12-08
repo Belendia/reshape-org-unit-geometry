@@ -10,9 +10,7 @@ with open('orgunit.json') as f:
                 'type': ou['featureType'].capitalize(),
                 'coordinates': ou['coordinates']
             }
-            # print(ou['coordinates'][-4:])
-            if ou['coordinates'][-4:] != "]]]]":
-                print(ou['id'])
+
             del ou['coordinates']
             del ou['featureType']
             orgUnits['organisationUnits'].append(ou)
